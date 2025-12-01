@@ -1,0 +1,302 @@
+/* Base layout */
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2b3e50, #1a2632);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+  justify-content: flex-start;
+  padding: 50px 20px 20px 20px; /* top padding large, bottom smaller */
+  margin: 0;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Header */
+header {
+  width: 100%; /* make header span full width */
+  max-width: 1000px; /* optional, to prevent it from stretching too wide */
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1.5rem 20px; /* horizontal padding matches body */
+  text-align: center;
+  box-sizing: border-box; /* ensure padding doesn’t overflow */
+  border-radius: 12px; /* optional: rounded corners */
+  margin-bottom: 40px; /* spacing below header */
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  min-height: 1.5em;
+  color: #ffffffee;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+header a {
+  display: inline-block;       /* treat links like blocks */
+  text-align: center;          /* center the text inside link */
+  margin: 0.5rem auto;         /* center horizontally */
+  padding: 0.5rem 1rem;        /* make it look like a button */
+  background: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+header a:hover {
+  background: #ff9800;
+  scale: 1.04;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Input field */
+input[type="text"] {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 260px;
+  text-size-adjust: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+}
+
+textarea {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 260px;
+  max-width: 100%;
+  height: 120px;           /* controls multiline height */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: box-shadow 0.2s ease;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+}
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      display: inline-block;       /* treat links like blocks */
+      text-align: center;          /* center the text inside link */
+      margin: 0.5rem auto;         /* center horizontally */
+      padding: 0.5rem 1rem;        /* make it look like a button */
+      background: #1a1a1a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .dropbtn:hover {
+      background: #ff9800;
+      scale: 1.04;
+    }
+
+    .dropbtn .arrow {
+      display: inline-block;
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown.active .arrow {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      z-index: 1;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+      overflow: hidden;
+      
+      /* hidden by default */
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      background-color: #fff;
+      color: #333;
+      transition: background 0.2s;
+    }
+
+    .dropdown-content a:hover {
+      background: #ff9800;
+      scale: 1.04;
+    }
+
+    /* Show the menu when active */
+    .dropdown.active .dropdown-content {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+/* Button */
+button {
+  background: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background: #ff9900;
+  scale: 1.04;
+}
+
+/* Result display */
+#result {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: #ffffffdd;
+}
+
+/* Links */
+a {
+  color: #ffd54f;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #fff176;
+  text-decoration: underline;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #eee;
+  display: none;
+  text-align: center; /* center all content horizontally */
+}
+
+section h2, section h3, section p, section a {
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 2em;
+}
+
+
+section.active {
+    display: block;
+}
+
+/* Center links inside Projects and Socials sections */
+section a {
+  display: inline-block;       /* treat links like blocks */
+  text-align: center;          /* center the text inside link */
+  margin: 0.5rem auto;         /* center horizontally */
+  padding: 0.5rem 1rem;        /* make it look like a button */
+  background: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+section a:hover {
+  background: #ff9800;
+  scale: 1.04;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0.5rem auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+input, select {
+    margin: 5px; 
+}
+
+table {
+    border-collapse: collapse; width: 100%; margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd; padding: 8px; text-align: left;
+}

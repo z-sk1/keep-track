@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keep track</title>
+        <link rel = "stylesheet" href = "styles/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 class = "typing colored">keep track</h1>
+
+            <div class = "dropdown">
+                <button class = "dropbtn">
+                    Menu <span class = "arrow">▼</span>
+                </button>
+                <div class = "dropdown-content">
+                    <a href = "#" onclick = "showSection('add')">Add Expense</a>
+                    <a href = "#" onclick = "showSection('table'); getAllExpenses()">Expense Tables</a>
+                </div>
+            </div>
+
+            <div class = "dropdown">
+                <button class = "dropbtn">
+                    Websites <span class = "arrow">▼</span>
+                </button>
+                <div class = "dropdown-content">
+                    <a href = "https://z-sk1.github.io" target = "_blank">z-sk's corner</a>
+                    <a href = "https://z-sk1.github.io/shrtnd" target = "_blank">shrtnd</a>
+                    <a href = "https://z-sk1.github.io/weathery" target = "_blank">weathery</a>
+                    <a href = "https://z-sk1.github.io/easy-define" target = "_blank">easy define</a>
+                </div>
+            </div>
+
+            <button onclick = "showSection('signup')">Sign Up</button>
+            <button onclick = "showSection('login')">Login</button>
+        </header>
+
+        <section id = "add">
+            <form id = "expenseForm">
+                <div class = "input-group">
+                    <input type="number" id="amount" step = "0.01" placeholder="Amount" required>
+                    <input type="text" id="category" placeholder="Category" required>
+                    <input type="date" id="date" required>
+                    <input type="text" id="note" placeholder="Note">
+                    <button type="submit">Add Expense</button>
+                </div>
+            </form>
+        </section>
+
+        <section id = "table">
+            <table id="expenseTable">
+                <thead>
+                    <tr>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Note</th>
+                    </tr>
+                </thead>
+
+                <tbody id = "expenseBody">
+                    <!-- Expenses will appear here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id = "signup">
+            <input type = "text" placeholder = "Create a username..." id = "signUpUsername"><br><br>
+            <input type = "text" placeholder = "Create a password..." id = "signUpPassword"><br><br>
+            <button onclick = "signup()">Create Account</button><br><br>
+        </section>
+
+        <section id = "login">
+            <input type = "text" placeholder = "Type in your username..." id = "loginUsername"><br><br>
+            <input type = "text" placeholder = "Type in your password..." id = "loginPassword"><br><br>
+            <button onclick = "login()"">Login</button><br><br>
+        </section>
+    </body>
+
+    <script src = "scripts/app.js"></script>
+    <script src = "scripts/onClick.js"></script>
+    <script src = "scripts/typing.js"></script>
+    <script src = "scripts/auth.js"></script>
+</html>
