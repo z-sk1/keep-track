@@ -1,4 +1,4 @@
-const API_BASE = "http://192.168.1.179:8080";
+const API_BASE = "https://educational-omaha-wireless-protecting.trycloudflare.com";
 
 async function signup() {
     const username = document.getElementById("signUpUsername").value.trim();
